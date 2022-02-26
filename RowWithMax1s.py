@@ -60,4 +60,12 @@ Output: 1
 Explanation: Row 1 contains 2 1's (0-based
 indexing).
 
+Algo :
+
+Step1: Get the index of first (or leftmost) 1 in the first row.
+Step2: Do following for every row after the first row 
+…IF the element on left of previous leftmost 1 is 0, ignore this row. 
+…ELSE Move left until a 0 is found. Update the leftmost index to this index and max_row_index to be the current row.
+The time complexity is O(m+n) because we can possibly go as far left as we came ahead in the first step.
+
 """
